@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>To-Do Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="index.html" class="back">← Back</a>
+      <h1>Smart To-Do Dashboard</h1>
+    </div>
+    <div class="meta">
+      <button id="refreshBtn">🔄 Refresh</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="cards">
+      <div class="card stat">
+        <div class="stat-title">Total Tasks</div>
+        <div id="totalTasks" class="stat-value">0</div>
+      </div>
+
+      <div class="card stat">
+        <div class="stat-title">Completed</div>
+        <div id="completedTasks" class="stat-value">0</div>
+      </div>
+
+      <div class="card stat">
+        <div class="stat-title">Pending</div>
+        <div id="pendingTasks" class="stat-value">0</div>
+      </div>
+
+      <div class="card stat">
+        <div class="stat-title">Today's Tasks</div>
+        <div id="todayTasks" class="stat-value">0</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card chart-card">
+        <h3>Overall Completion</h3>
+        <canvas id="progressRing" width="300" height="300"></canvas>
+      </div>
+
+      <div class="card chart-card">
+        <h3>Tasks by Category</h3>
+        <canvas id="categoryPie" width="300" height="300"></canvas>
+      </div>
+
+      <div class="card chart-card wide">
+        <h3>Weekly Productivity (Completed tasks)</h3>
+        <canvas id="weeklyBar" width="800" height="300"></canvas>
+      </div>
+
+      <div class="card recent">
+        <h3>Recent Tasks</h3>
+        <ul id="recentList" class="recent-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Libs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Dashboard logic -->
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* --- Base Reset --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    transition: 0.3s;
+}
+
+.dashboard-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #6a5acd;
+    border-radius: 8px;
+    
+  padding: 10px 16px;
+  color: #000000;
+  font-weight: 300;
+  text-decoration: none;
+  transition: 0.3s;
+  
+}
+
+.dashboard-btn:hover {
+  background: #5848c2;
+  transform: translateY(-2px);
+}
+
+
+/* --- Theme Toggle Button --- */
+.theme-toggle{
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+}
+#themeBtn{
+    padding: 8px 14px;
+    margin-bottom: 1rem;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+/* --- Container --- */
+.container{
+    background: #fff;
+    padding: 25px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    transition: 0.2s;
+}
+
+button{
+    padding: 10px 15px;
+    background: #6a5acd;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+    background: #5848c2;
+}
+
+/* ---- Task Box ---- */
+#taskList{
+    list-style: none;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    background: #eee;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.task span{
+    font-weight: 500;
+}
+
+.btns button{
+    margin-left: 5px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn{ background: #00b894; color: #fff; }
+.delete-btn{ background: #d63031; color: #fff; }
+.complete-btn{ background: #0984e3; color: #fff; }
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* ------------------- DARK MODE ------------------- */
+
+body.dark{
+    background: #1e1e1e;
+}
+
+body.dark .container{
+    background: #2a2a2a;
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.1);
+}
+
+body.dark input,
+body.dark select{
+    background: #3b3b3b;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark .task{
+    background: #3c3c3c;
+    color: #fff;
+}
+
+body.dark #themeBtn{
+    background: #fff;
+    color: #000;
+}
