@@ -26,6 +26,7 @@ body{
   padding:20px 28px;
   background:transparent;
   gap:12px;
+  flex-wrap:wrap;
 }
 .brand { display:flex; align-items:center; gap:14px; }
 .brand h1{ font-size:18px; margin:0; font-weight:600; color:#111827; }
@@ -98,11 +99,15 @@ body{
   background:linear-gradient(180deg, #fff, #fafafa);
   border:1px solid rgba(18,24,40,0.03);
   box-shadow: 0 4px 14px rgba(17,24,39,0.03);
+  flex-wrap:wrap;
 }
 .recent-item .left{
   display:flex;
   gap:10px;
   align-items:center;
+  flex:1 1 100%;
+  min-width:0;
+  flex-wrap:wrap;
 }
 .cat-badge{
   padding:6px 8px;
@@ -119,13 +124,16 @@ body{
 /* small text */
 .small{ font-size:12px; color:var(--muted); }
 
-/* responsive */
-@media (max-width:980px){
-  .cards{ grid-template-columns:repeat(2,1fr); }
-  .grid{ grid-template-columns:1fr; }
-}
-@media (max-width:520px){
+/* ------------------- RESPONSIVE ------------------- */
+/* tablets */
+
+/* phones */
+@media (max-width:480px){
   .cards{ grid-template-columns:1fr; }
-  .brand h1{ display:none; }
-  .back{ padding:8px; }
+  .grid{ grid-template-columns:1fr; gap:12px; }
+  .wrap{ padding:12px; }
+  .chart-card h3, .recent h3{ font-size:1px; }
+  .stat-value{ font-size:20px; }
 }
+
+/* small phones */
